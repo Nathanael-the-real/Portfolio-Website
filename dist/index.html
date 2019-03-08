@@ -1,21 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>John Doe | UI/UX Designer & Photographer</title>
+  <!-- font awesome css -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+    crossorigin="anonymous">
   <!-- google fonts -->
   <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
-  <!-- font awesome css -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <!-- main css -->
   <link rel="stylesheet" href="css/main.css">
+  <title>John Doe | UI/UX Designer & Photographer</title>
 </head>
+
 <body>
 
-  <h1><i class="fas fa-home"></i>Hello Wolrd!</i> </h1>
-  
+  <header id="header-home">
+    <div class="container">
+      <nav id="main-nav">
+        <img src="img/logo.png" alt="logo" id="logo">
+        <ul>
+          <li><a href="index.html" class="current">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="work.html">Work</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-content">
+        <h1>I Am John The <span class="txt-type" data-wai="3000" data-words='["Photographer", "Designer", "UI/UX Dev"]'></span></h1>
+        <p class="lead">I specialize in graphic design, UI/UX and Photography </p>
+        <a href="work.html" class="btn-light">View My Work</a>
+      </div>
+    </div>
+  </header>
+
+
+
+  <!-- Type Effect Tutorial: https://www.youtube.com/watch?v=POX3dT-pB4E -->
+  <script src="js/typewriter.js"></script>
 </body>
+
 </html>
