@@ -172,14 +172,14 @@ img {
   text-align: center; }
   #home-c .process-step {
     position: absolute;
-    top: 32px;
-    right: -5px;
+    top: 0px;
+    right: -10px;
     font-size: 28px;
     background: #ffbc00;
     color: #ffff;
     border-radius: 50%;
-    height: 15px;
-    width: 15px;
+    height: 50px;
+    width: 50px;
     line-height: 15px;
     padding: 1rem;
     transition: all 1s; }
@@ -190,7 +190,7 @@ img {
     padding: 2rem;
     width: 150px;
     height: 150px;
-    line-height: 150px;
+    line-height: 80px;
     text-align: center;
     position: relative;
     transition: all 1s; }
@@ -198,9 +198,10 @@ img {
       background: #ffbc00;
       width: 160px;
       height: 160px;
-      line-height: 160px; }
+      line-height: 80px; }
       #home-c .process-icon:hover .process-step {
-        background: #333; }
+        background: #333;
+        color: #ffff; }
 
 #main-footer {
   background: #333;
