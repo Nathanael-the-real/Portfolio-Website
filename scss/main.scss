@@ -171,8 +171,8 @@ img {
       // process-step
       &-step {
         position: absolute;
-        top: 0;
-        right: 0;
+        top: 32px;
+        right: -5px;
         font-size: 28px;
         background: $main-color;
         color: set-text-color($main-color);
@@ -190,18 +190,18 @@ img {
         background: $dark-color;
         color: set-text-color($dark-color);
         padding: 2rem;
-        width: 100px;
-        height: 100px;
-        line-height: 100px;
+        width: 150px;
+        height: 150px;
+        line-height: 150px;
         text-align: center;
         position: relative;
         transition: all 1s;
 
         &:hover {
           background: $main-color;
-          width: 90px;
-          height: 90px;
-          line-height: 90px;
+          width: 160px;
+          height: 160px;
+          line-height: 160px;
 
           .process-step {
             background: $dark-color;
@@ -211,5 +211,35 @@ img {
     }
 
 
+  }
+}
+
+// Footer
+
+#main-footer {
+  background: $dark-color;
+  color: $primary-color;
+  height: 5rem;
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+
+
+    .social .fab {
+      margin-right: 1px;
+      border: 2px solid $primary-color;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      text-align: center;
+      padding: 0.5rem;
+
+      &:hover {
+        background: $main-color;
+      }
+    }
   }
 }
