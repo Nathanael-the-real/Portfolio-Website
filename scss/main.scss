@@ -3,243 +3,234 @@
 
 // General styles
 html {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 *,
 *::before,
 *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit;
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
 }
 
 body {
-  font-family: 'Dosis', sans-serif;
-  line-height: 1.6;
-  background: $primary-color;
+	font-family: 'Dosis', sans-serif;
+	line-height: 1.6;
+	background: $primary-color;
 }
 
 a {
-  text-decoration: none;
+	text-decoration: none;
 }
 
 ul {
-  list-style: none;
+	list-style: none;
 }
 
 h2,
 h3,
 h4 {
-  text-transform: uppercase;
+	text-transform: uppercase;
 }
 
 img {
-  width: 100%;
+	width: 100%;
 }
 
 // Logo
 #logo {
-  width: 70px;
-  height: 70px;
-  color: $primary-color;
-  text-transform: uppercase;
+	width: 70px;
+	height: 70px;
+	color: $primary-color;
+	text-transform: uppercase;
 }
-
 
 // Main Nav
 #main-nav {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 1rem;
+	display: flex;
+	justify-content: space-between;
+	padding-top: 1rem;
 
-  ul {
-    display: flex;
+	ul {
+		display: flex;
 
-    li {
-      padding: 1rem 1.5rem;
+		li {
+			padding: 1rem 1.5rem;
 
-      a {
-        color: $primary-color;
-        text-transform: uppercase;
-        border-bottom: 3px solid transparent;
-        padding-bottom: 0.5rem;
-        transition: border .5s;
+			a {
+				color: $primary-color;
+				text-transform: uppercase;
+				border-bottom: 3px solid transparent;
+				padding-bottom: 0.5rem;
+				transition: border .5s;
 
-        &:hover {
-          border-color: $medium-color;
-        }
+				&:hover {
+					border-color: $medium-color;
+				}
 
-        &.current {
-          border-color: $main-color;
-        }
-      }
-    }
-  }
+				&.current {
+					border-color: $main-color;
+				}
+			}
+		}
+	}
 }
-
 
 // Header
 
 #header {
+	&-home {
+		background: $bg-image center right/cover no-repeat;
+		height: 100vh;
+		color: $primary-color;
 
-  &-home {
-    background: $bg-image center right/cover no-repeat;
-    height: 100vh;
-    color: $primary-color;
+		// Header content
 
-    // Header content
+		.header-content {
+			text-align: center;
+			padding-top: 20%;
 
-    .header-content {
-      text-align: center;
-      padding-top: 20%;
+			h1 {
+				font-size: 4rem;
+				left: 1.2em;
+			}
+		}
+	}
 
-      h1 {
-        font-size: 4rem;
-        left: 1.2em;
-      }
-    }
-  }
-
-  // Header Inner
-  &-inner {}
+	// Header Inner
+	&-inner {
+	}
 }
 
 // Home Section
 
 #home {
+	// Home section A
+	&-a {
+		.specials {
+			margin-top: 3rem;
+			display: grid;
+			grid-gap: 1rem;
+			grid-template-columns: repeat(4, 1fr);
 
-  // Home section A
-  &-a {
+			.fas {
+				color: $main-color;
+				padding-bottom: 0.4rem;
+			}
+		}
+	}
 
-    .specials {
-      margin-top: 3rem;
-      display: grid;
-      grid-gap: 1rem;
-      grid-template-columns: repeat(4, 1fr);
+	// Home section B
+	&-b {
+		.stats {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
 
-      .fas {
-        color: $main-color;
-        padding-bottom: 0.4rem;
-      }
-    }
+			li {
+				line-height: 2;
 
-  }
+				&.stats-title {
+					font-size: 1.5rem;
+				}
 
-  // Home section B
-  &-b {
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
+				&.stats-number {
+					font-size: 2rem;
+					font-weight: bold;
+				}
+			}
 
-      li {
-        line-height: 2;
+			div {
+				padding: 3rem 0;
 
-        &.stats-title {
-          font-size: 1.5rem;
-        }
+				&:nth-child(odd) {
+					background: $light-color;
+				}
 
-        &.stats-number {
-          font-size: 2rem;
-          font-weight: bold;
-        }
-      }
+				&:nth-child(even) {
+					background: $medium-color;
+				}
+			}
+		}
+	}
 
-      div {
-        padding: 3rem 0;
+	// Home section C
+	&-c {
+		.process {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			grid-gap: 1.5rem;
+			text-align: center;
 
-        &:nth-child(odd) {
-          background: $light-color;
-        }
+			// process-step
+			&-step {
+				position: absolute;
+				top: 32px;
+				right: -5px;
+				font-size: 28px;
+				background: $main-color;
+				color: set-text-color($main-color);
+				border-radius: 50%;
+				height: 15px;
+				width: 15px;
+				line-height: 15px;
+				padding: 1rem;
+				transition: all 1s;
+			}
 
-        &:nth-child(even) {
-          background: $medium-color;
-        }
-      }
-    }
-  }
+			// Process-icon
+			&-icon {
+				border-radius: 50%;
+				background: $dark-color;
+				color: set-text-color($dark-color);
+				padding: 2rem;
+				width: 150px;
+				height: 150px;
+				line-height: 150px;
+				text-align: center;
+				position: relative;
+				transition: all 1s;
 
-  // Home section C
-  &-c {
+				&:hover {
+					background: $main-color;
+					width: 160px;
+					height: 160px;
+					line-height: 160px;
 
-    .process {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      grid-gap: 1.5rem;
-      text-align: center;
-
-      // process-step
-      &-step {
-        position: absolute;
-        top: 32px;
-        right: -5px;
-        font-size: 28px;
-        background: $main-color;
-        color: set-text-color($main-color);
-        border-radius: 50%;
-        height: 15px;
-        width: 15px;
-        line-height: 15px;
-        padding: 1rem;
-        transition: all 1s;
-      }
-
-      // Process-icon
-      &-icon {
-        border-radius: 50%;
-        background: $dark-color;
-        color: set-text-color($dark-color);
-        padding: 2rem;
-        width: 150px;
-        height: 150px;
-        line-height: 150px;
-        text-align: center;
-        position: relative;
-        transition: all 1s;
-
-        &:hover {
-          background: $main-color;
-          width: 160px;
-          height: 160px;
-          line-height: 160px;
-
-          .process-step {
-            background: $dark-color;
-          }
-        }
-      }
-    }
-
-
-  }
+					.process-step {
+						background: $dark-color;
+					}
+				}
+			}
+		}
+	}
 }
 
 // Footer
 
 #main-footer {
-  background: $dark-color;
-  color: $primary-color;
-  height: 5rem;
+	background: $dark-color;
+	color: $primary-color;
+	height: 5rem;
 
-  .footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 5rem;
+	.footer-content {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 5rem;
 
+		.social .fab {
+			margin-right: 1px;
+			border: 2px solid $primary-color;
+			border-radius: 50%;
+			width: 35px;
+			height: 35px;
+			text-align: center;
+			padding: 0.5rem;
 
-    .social .fab {
-      margin-right: 1px;
-      border: 2px solid $primary-color;
-      border-radius: 50%;
-      width: 20px;
-      height: 20px;
-      text-align: center;
-      padding: 0.5rem;
-
-      &:hover {
-        background: $main-color;
-      }
-    }
-  }
+			&:hover {
+				background: $main-color;
+			}
+		}
+	}
 }
